@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd6_Shaidullin.Info">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Tour Info"
+                 Order="Primary"
+                 Priority="0" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="15">
+            <Label Text="Info by tour"
+                FontSize="26"
+                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="tourTitle" Text=""/>
+            <Label x:Name="tourCountry" Text=""/>
+            <Label x:Name="tourCatigory" Text=""/>
+            <Label x:Name="tourPrice" Text=""/>
+            <Label x:Name="tourTourOperator" Text=""/>
+            <Label x:Name="tourDays" Text=""/>
+            <Label x:Name="tourDescription" Text=""/>
+            
+            <Label Text="How many days you want take: "/>
+            <Slider x:Name="daysSlier"
+					ValueChanged="daysSliderValue_Changed"
+					Maximum="30"
+					Minimum="1"
+					ThumbColor="blue"/>
+            
+            <FlexLayout JustifyContent="SpaceBetween">
+                <Button Text="Back" Clicked="onBackBtn_Clicked"/>
+                <Button Text="Get Tour" Clicked="onGetTourBtn_Clicked"/>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd6_Shaidullin.CreateTour">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="./style.css" />
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="15">
+            <Label Text="Create new Tour"
+                FontSize="42"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="titleField" Placeholder="Enter Title"/>
+            <Entry x:Name="countryField" Placeholder="Enter Country"/>
+            <Entry x:Name="catigoryField" Placeholder="Enter Catigory"/>
+            <Entry x:Name="priceField" Keyboard="Numeric" Placeholder="Enter Price"/>
+            <Entry x:Name="tourOperatorField" Placeholder="Enter Tour Operator"/>
+            <Slider x:Name="daysSlier"
+					ValueChanged="daysSliderValue_Changed"
+					Maximum="7"
+					Minimum="1"
+					ThumbColor="blue"/>
+            <Entry x:Name="descriptionField" Placeholder="Enter Description"/>
+
+            <FlexLayout JustifyContent="SpaceBetween">
+                <Button Text="Back" Clicked="onBackBtn_Clicked"/>
+                <Button Text="Create" Clicked="onCreateBtn_Clicked"/>
+            </FlexLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
